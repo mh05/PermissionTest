@@ -37,8 +37,8 @@
             Permission = string.Empty;
             CurrentPermission = string.Empty;
 
-            var checkedPermission = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>(); // always returns denied if users selected approximate location
-            var selectedPermission = await Permissions.RequestAsync<Permissions.LocationWhenInUse>(); // Returns correct value on apprixomate its restricted and granded on precise
+           var checkedPermission = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>(); // always returns denied if users selected approximate location
+           var selectedPermission = await Permissions.RequestAsync<Permissions.LocationWhenInUse>(); // Returns correct value on approximated its restricted and granted on precise
 
             Permission = selectedPermission.ToString();
             CurrentPermission = checkedPermission.ToString();
